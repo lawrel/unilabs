@@ -1,0 +1,12 @@
+from PIL import Image
+im = Image.new("RGB",(512,512))
+im2 = Image.open("ca.jpg").resize((256,256))
+im3 = Image.open('im.jpg').resize((256,256))
+im4 = Image.open('hk.jpg').resize((256,256))
+im5 = Image.open('bw.jpg').resize((256,256))
+im.paste(im2,(0,0))
+im.paste(im3,(0,256))
+im.paste(im4,(256,0))
+im.paste(im5,(256,256))
+im.save("avengers.jpg")
+im.show()
